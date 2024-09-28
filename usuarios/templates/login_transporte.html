@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <!-- Informações Básicas da Página
+    ================================================== -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Metas Específicas para Dispositivos Móveis
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Meta Dados para Motores de Busca  -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="100destinos.com" />
+	
+    <title>100destinos: Login</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/icon" href="#"/>
+    
+    <!-- Arquivo principal de estilo CSS -->
+    <link rel="stylesheet" href="{% static 'login/css/login3-style.css' %}">
+    
+   
+  </head>
+  
+  <body>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="authfy-container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-sm-offset-1 col-md-offset-2 col-lg-offset-3">
+          <div class="col-sm-5 authfy-panel-left">
+            <div class="brand-col">
+              <div class="headline">
+                <!-- Início do logo da marca -->
+                <div class="brand-logo">
+                  <h1 style="font-size: 35px;" >100Destinos</h1>
+                </div><!-- ./brand-logo -->
+                <p>Faça login usando redes sociais para ter acesso rápido</p>
+                <!-- Início dos botões de login social -->
+                <div class="row social-buttons">
+                  <div class="col-xs-4 col-sm-4 col-md-12">
+                    <a href="#" class="btn btn-block btn-facebook">
+                      <i class="fa fa-facebook"></i> <span class="hidden-xs hidden-sm">Entrar com Facebook</span>
+                    </a>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-12">
+                    <a href="#" class="btn btn-block btn-twitter">
+                      <i class="fa fa-twitter"></i> <span class="hidden-xs hidden-sm">Entrar com Twitter</span>
+                    </a>
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-12">
+                    <a href="#" class="btn btn-block btn-google">
+                      <i class="fa fa-google-plus"></i> <span class="hidden-xs hidden-sm">Entrar com Google</span>
+                    </a>
+                  </div>
+                </div><!-- ./social-buttons -->
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-7 authfy-panel-right">
+            <!-- authfy-login start -->
+            <div class="authfy-login">
+              <!-- panel-login start -->
+              <div class="authfy-panel panel-login text-center active">
+                <div class="authfy-heading">
+                  <h3 class="auth-title">Agencia de Viajem</h3>
+                  <p>Não tem uma conta? <a class="lnk-toggler" data-panel=".panel-signup" href="login-03.html#">Entre em contacto com o Admin!</a></p>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <form name="loginForm" class="loginForm" action="{% url 'usuarios:valida_login_transporte' %}" method="POST"> {% csrf_token %}
+                      <div class="form-group">
+                        <input type="email" class="form-control email" name="email" placeholder="Endereço de e-mail">
+                      </div>
+                      <div class="form-group">
+                        <div class="pwdMask">
+                          <input type="password" class="form-control password" name="senha" placeholder="Senha">
+                          <span class="fa fa-eye-slash pwd-toggle"></span>
+                        </div>
+                      </div>
+                      <!-- start remember-row -->
+                      <div class="row remember-row">
+                        <div class="col-xs-6 col-sm-6">
+                          <label class="checkbox text-left">
+                            <input type="checkbox" value="remember-me">
+                            <span class="label-text">Lembrar-me</span>
+                          </label>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                          <p class="forgotPwd">
+                            <a class="lnk-toggler" data-panel=".panel-forgot" href="login-03.html#">Esqueceu a senha?</a>
+                          </p>
+                        </div>
+                      </div> <!-- ./remember-row -->
+                      <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                {% if messages %}
+                  <div class="mb-4">
+                      {% for message in messages %}
+                          <div class="text-red-600">{{ message }}</div>
+                      {% endfor %}
+                  </div>
+              {% endif %}
+
+              </div> <!-- ./panel-login -->
+              <!-- panel-signup start -->
+              
+              <!-- panel-forget start -->
+              <div class="authfy-panel panel-forgot">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <div class="authfy-heading">
+                      <h3 class="auth-title">Recuperar sua senha</h3>
+                      <p>Insira seu endereço de e-mail abaixo e enviaremos um e-mail com instruções para recuperação.</p>
+                    </div>
+                    <form name="forgetForm" class="forgetForm" action="login-03.html#" method="POST">
+                      <div class="form-group">
+                        <input type="email" class="form-control" name="username" placeholder="Endereço de e-mail">
+                      </div>
+                      <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Recuperar senha</button>
+                      </div>
+                      <div class="form-group">
+                        <a class="lnk-toggler" data-panel=".panel-login" href="login-03.html#">Já tem uma conta?</a>
+                      </div>
+                      
+                    </form>
+                  </div>
+                </div>
+              </div> <!-- ./panel-forgot -->
+            </div> <!-- ./authfy-login -->
+          </div>
+        </div>
+      </div> <!-- ./row -->
+    </div> <!-- ./container -->
+    
+    <!-- Arquivos Javascript -->
+
+    <!-- inicializar a biblioteca jQuery -->
+    <script src="{% static 'login/js/jquery-2.2.4.min.js' %}"></script>
+  
+    <!-- para js do Bootstrap -->
+    <script src="{% static 'login/js/bootstrap.min.js' %}"></script>
+  
+    <!-- Custom js-->
+    <script src="{% static 'login/js/custom.js' %}"></script>
+
+  </body>
+</html>

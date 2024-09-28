@@ -4,6 +4,7 @@ from usuarios import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),  
-    path('', views.index, name="index"),  
-    path('usuarios/', include('usuarios.urls')), 
+    path('', views.index, name="index"),  # A URL para a view index
+    path('100destino/', include('usuarios.urls')), 
+    
 ]

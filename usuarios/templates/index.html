@@ -28,6 +28,15 @@
 
         <link href="{% static 'css/tooplate-moso-interior.css' %}" rel="stylesheet">
         
+
+        <style>
+            .shop-image {
+    width: 100%; /* Faz com que a imagem ocupe toda a largura da coluna */
+    height: 200px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem preencha o espaço, cortando se necessário */
+}
+
+        </style>
    
    
 
@@ -35,93 +44,43 @@
     
     <body>
 
-        <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'index' %}">100 <span class="tooplate-red">Desti</span><span class="tooplate-green">nos</span></a>
         
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_1"><i class="bi bi-house-door-fill"></i> Início</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#"><i class="bi bi-globe"></i> Destinos</a>
-                        </li>
-        
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle click-scroll" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-ticket-perforated"></i> Reservas
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Minhas Reservas</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="bi bi-plus-circle"></i> Fazer Nova Reserva</a></li>
-                            </ul>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#"><i class="bi bi-chat-left-text-fill"></i> Dicas de Viagem</a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#"><i class="bi bi-envelope-fill"></i> Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         
 
-        <main>
-
-            
-            <section class="hero-section hero-slide d-flex justify-content-center align-items-center" id="section_1" 
-            style="background-image: url('../images/young-adult-travelling-winter-time.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            min-height: 70vh;"> <!-- Diminuído o min-height -->
-            <div class="container">
+        <main  >
+            <section   class="hero-section hero-slide d-flex justify-content-center align-items-center" id="section_1"> 
+            <div  class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12 text-center mx-auto">
                         <div class="hero-section-text">
+
                             <div class="d-flex justify-content-center align-items-center">
-                                <form class="custom-form hero-form" action="#" method="get" role="form" style="width: 100%;">
-                                    <div class="row align-items-center gx-3 gy-2 justify-content-center">
-                                        <!-- Campo de Origem -->
-                                        <div class="col-md-3 col-12">
-                                            <div class="input-group">
-                                                <label for="origin" class="form-label me-2" style="font-size: 14px; font-weight: 600;">Origem</label>
-                                                <input type="text" name="origin" id="origin" class="form-control form-control-lg" placeholder="Cidade de origem" required>
+                                <form class="custom-form hero-form" action="#" method="get" role="form">
+                                    <div class="row">
+                                        <div class="col-lg-5 col-md-6 col-12">
+                                            <div class="input-group align-items-center">
+                                                <label for="product-name">Onde voce vai?</label>
+                                                <input type="text" name="product-name" id="product-name" class="form-control" placeholder="Luanda, Benguela,Huambo" required>
+                                            </div>
+                                        </div>
+
+
+                                        
+                                        
+                                        <div class="col-lg-5 col-md-6 col-12">
+                                            <div class="input-group align-items-center">
+                                                <label for="product-name">Data</label>
+                                                <input type="datetime-local" name="product-name" id="product-name" class="form-control" placeholder="Luanda, Benguela,Huambo" required>
                                             </div>
                                         </div>
                                         
-                                        <!-- Campo de Destino -->
-                                        <div class="col-md-3 col-12">
-                                            <div class="input-group">
-                                                <label for="destination" class="form-label me-2" style="font-size: 14px; font-weight: 600;">Destino</label>
-                                                <input type="text" name="destination" id="destination" class="form-control form-control-lg" placeholder="Cidade de destino" required>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Campo de Data de Ida -->
-                                        <div class="col-md-3 col-12">
-                                            <div class="input-group">
-                                                <label for="departure-date" class="form-label me-2" style="font-size: 14px; font-weight: 600;">Data</label>
-                                                <input type="date" name="departure-date" id="departure-date" class="form-control form-control-lg" required>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Botão de Busca -->
-                                        <div class="col-md-3 col-12">
-                                            <button type="submit" class="btn btn-primary btn-lg w-100" style="font-size: 16px;">Buscar</button>
+                                        <div class="col-lg-2 col-md-6 col-12">
+                                            <button type="submit" class="form-control">Buscar</button>
                                         </div>
                                     </div>
                                 </form>
+                                
                                 
                             </div>
                             
@@ -136,90 +95,90 @@
         
         
 
-            <section class="shop-section section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-            
-                        <div class="col-lg-12 col-12 text-center">
-                            <small class="section-small-title"></small>
-                            <h2 class="mt-2 mb-4 fs-3 fs-md-2 fs-lg-1"> <!-- Ajustando a classe de tamanho -->
-                                <span class="tooplate-red">Transportadoras</span> 100 Destinos
-                            </h2>
-                        </div>
-                        
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wrap">
-                                    <a href="#">
-                                        <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4>macom</h4>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wrap">
-                                    <a href="#">
-                                        <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4>macom</h4>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wrap">
-                                    <a href="#">
-                                        <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4>macom</h4>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wrap">
-                                    <a href="#">
-                                        <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4>macom</h4>
-                                </div>
-                            </div>
-                        </div>
-            
+        <section class="shop-section section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-lg-12 col-12 text-center">
+                        <small class="section-small-title"></small>
+                        <h2 class="mt-2 mb-4 fs-3 fs-md-2 fs-lg-1">
+                            <span class="tooplate-red">Transportadoras</span> 100 Destinos
+                        </h2>
                     </div>
+        
+                    <div class="col-lg-4 col-md-6 col-6">
+                        <div class="shop-thumb">
+                            <div class="shop-image-wrap">
+                                <a href="{% url 'usuarios:transportadoras' %}">
+                                    <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
+                                </a>
+                                <div class="shop-btn-wrap">
+                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                </div>
+                            </div>
+                            <div class="shop-body">
+                                <h4>macon</h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-6 col-6">
+                        <div class="shop-thumb">
+                            <div class="shop-image-wrap">
+                                <a href="{% url 'usuarios:transportadoras' %}">
+                                    <img src="{% static 'images/R.jpeg' %}" class="shop-image img-fluid" alt="">
+                                </a>
+                                <div class="shop-btn-wrap">
+                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                </div>
+                            </div>
+                            <div class="shop-body">
+                                <h4>Angoreal</h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-6 col-6">
+                        <div class="shop-thumb">
+                            <div class="shop-image-wrap">
+                                <a href="{% url 'usuarios:transportadoras' %}">
+                                    <img src="{% static 'images/IMG-20231018-WA0000.jpg' %}" class="shop-image img-fluid" alt="">
+                                </a>
+                                <div class="shop-btn-wrap">
+                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                </div>
+                            </div>
+                            <div class="shop-body">
+                                <h4>HuamboExpress</h4>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-4 col-md-6 col-6">
+                        <div class="shop-thumb">
+                            <div class="shop-image-wrap">
+                                <a href="{% url 'usuarios:transportadoras' %}">
+                                    <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
+                                </a>
+                                <div class="shop-btn-wrap">
+                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                </div>
+                            </div>
+                            <div class="shop-body">
+                                <h4>macom</h4>
+                            </div>
+                        </div>
+                    </div>
+        
                 </div>
-            </section>
+            </div>
+        </section>
+        
             
 
 
             
-            <section class="shop-section section-padding" id="section_3">
+            <section style="margin-top: -10%;"  class="shop-section section-padding" id="section_3">
                 <div class="container">
                     <div class="row">
             
@@ -239,7 +198,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Huambo</h4>
+                                    <h4 style="font-size: 22px;" >Huambo, Huila</h4>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +214,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Lubango</h4>
+                                    <h4 style="font-size: 22px;" >Lubango, Cabinda</h4>
                                 </div>
                             </div>
                         </div>
@@ -271,7 +230,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Benguela</h4>
+                                    <h4 style="font-size: 22px;" >Benguela, Huambo</h4>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +246,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Namibe</h4>
+                                    <h4 style="font-size: 22px;" >Namibe, Cunene</h4>
                                 </div>
                             </div>
                         </div>
@@ -303,7 +262,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Malange</h4>
+                                    <h4 style="font-size: 22px;" >Malange, Menongue</h4>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +278,7 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4>Cabinda</h4>
+                                    <h4 style="font-size: 22px;" >Cabinda, Moxico</h4>
                                 </div>
                             </div>
                         </div>
