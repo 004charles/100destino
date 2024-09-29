@@ -12,6 +12,7 @@
 
         <!-- CSS FILES -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,6 +37,34 @@
     object-fit: cover; /* Faz com que a imagem preencha o espaço, cortando se necessário */
 }
 
+.navbar {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.navbar .fa {
+    font-size: 1rem; /* Tamanho dos ícones */
+    color: #0056b3; /* Cor dos ícones */
+}
+
         </style>
    
    
@@ -45,7 +74,49 @@
     <body>
 
         
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" style="padding: 0.5rem 1rem;">
+            <div class="container">
+                <!-- Logotipo -->
+                <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.2rem;">
+                    100 <span class="text-danger">Desti</span><span class="text-success">nos</span>
+                </a>
+        
+                <!-- Botão para dispositivos móveis -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <!-- Itens da barra de navegação -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Login Agência -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="{% url 'usuarios:login_transporte' %}" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
+                                <i class="fas fa-sign-in-alt me-2"></i> Login Agência
+                            </a>
+                        </li>
+        
+                        <!-- Login Admin -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="{% url 'usuarios:login_admin' %}" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
+                                <i class="fas fa-user-shield me-2"></i> Login Admin
+                            </a>
+                        </li>
+        
+                        <!-- Contactar -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#section_2" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
+                                <i class="fas fa-phone-alt me-2"></i> Contactar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        
+        
+        
         
 
         <main  >
@@ -117,7 +188,7 @@
                                 </div>
                             </div>
                             <div class="shop-body">
-                                <h4>macon</h4>
+                                <h4 style="font-size: 16px;" >macon</h4>
                             </div>
                         </div>
                     </div>
@@ -125,15 +196,15 @@
                     <div class="col-lg-4 col-md-6 col-6">
                         <div class="shop-thumb">
                             <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:transportadoras' %}">
+                                <a href="{% url 'usuarios:ango' %}">
                                     <img src="{% static 'images/R.jpeg' %}" class="shop-image img-fluid" alt="">
                                 </a>
                                 <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                    <a href="{% url 'usuarios:ango' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
                                 </div>
                             </div>
                             <div class="shop-body">
-                                <h4>Angoreal</h4>
+                                <h4 style="font-size: 16px;" >Angoreal</h4>
                             </div>
                         </div>
                     </div>
@@ -141,15 +212,15 @@
                     <div class="col-lg-4 col-md-6 col-6">
                         <div class="shop-thumb">
                             <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:transportadoras' %}">
+                                <a href="{% url 'usuarios:huambo' %}">
                                     <img src="{% static 'images/IMG-20231018-WA0000.jpg' %}" class="shop-image img-fluid" alt="">
                                 </a>
                                 <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
+                                    <a href="{% url 'usuarios:huambo' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
                                 </div>
                             </div>
                             <div class="shop-body">
-                                <h4>HuamboExpress</h4>
+                                <h4 style="font-size: 16px;" >HuamboExpress</h4>
                             </div>
                         </div>
                     </div>
@@ -165,7 +236,7 @@
                                 </div>
                             </div>
                             <div class="shop-body">
-                                <h4>macom</h4>
+                                <h4 style="font-size: 16px;" >macon</h4>
                             </div>
                         </div>
                     </div>
@@ -182,10 +253,13 @@
                 <div class="container">
                     <div class="row">
             
-                        <div class="col-lg-12 col-12">
-                            <small class="section-small-title"></small>
-                            <h2 class="mt-2 mb-4"><span class="tooplate-red">Nossos</span> Destinos</h2>
+                        <div class="col-lg-12 col-12 text-center">
+                            <small class="section-small-title" style="font-style: italic; color: #6c757d;">Descubra</small>
+                            <h2 class="mt-2 mb-4" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 2px; color: #0056b3; text-transform: uppercase;">
+                                <span class="tooplate" style="color:#0056b3;">Nossos</span> Destinos
+                            </h2>
                         </div>
+                        
             
                         <div class="col-lg-4 col-md-6 col-6">
                             <div class="shop-thumb">
@@ -198,8 +272,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Huambo, Huila</h4>
+                                    <h4 style="font-size: 19px;" >Huambo, Huila</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
             
@@ -214,8 +296,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Lubango, Cabinda</h4>
+                                    <h4 style="font-size: 19px;" >Lubango, Cabinda</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
 
@@ -230,8 +320,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Benguela, Huambo</h4>
+                                    <h4 style="font-size: 19px;" >Benguela, Huambo</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
 
@@ -246,8 +344,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Namibe, Cunene</h4>
+                                    <h4 style="font-size: 19px;" >Namibe, Cunene</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
 
@@ -262,8 +368,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Malange, Menongue</h4>
+                                    <h4 style="font-size: 19px;" >Malange, Menongue</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
             
@@ -278,8 +392,16 @@
                                     </div>
                                 </div>
                                 <div class="shop-body">
-                                    <h4 style="font-size: 22px;" >Cabinda, Moxico</h4>
+                                    <h4 style="font-size: 19px;" >Cabinda, Moxico</h4>
                                 </div>
+                                <p class="shop-pricing mb-0 mt-3">
+                                    <p class="shop-pricing mb-0 mt-3">
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                        <span class="badge custom-badge">9:30</span>
+                                    </p>
+                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
+                                </p>
                             </div>
                         </div>
             

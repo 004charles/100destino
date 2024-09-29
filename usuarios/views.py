@@ -41,7 +41,7 @@ def valida_login_transporte(request):
     
     # Se houver um resultado, faça o login
     request.session['companhia'] = companhia[0].id
-    return redirect('usuarios:index')  # Redireciona para a página principal
+    return redirect('usuarios:conta_agencia')  # Redireciona para a página principal
 
 def valida_login_admin(request):
     email = request.POST.get('email')
@@ -54,7 +54,26 @@ def valida_login_admin(request):
         return redirect('usuarios:login_admin')  
     
     request.session['usuarios'] = usuarios[0].id
-    return redirect('usuarios:index')
+    return redirect('usuarios:adminOs')
 
 def login_admin(request):
     return render(request, 'conta_admin.html')
+
+
+def admin(request):
+    return render(request, 'admin.html')
+
+def conta_agencia(request):
+    return render(request, 'conta_agencia.html')
+
+def viagem_agencia(request):
+    return render(request, 'viagem_agencia.html')
+
+def pagamento(request):
+    return render(request, 'pagamento.html')
+
+def Ango(request):
+    return render(request, 'ango.html')
+
+def huambo(request):
+    return render(request, 'huamboexpress.html')

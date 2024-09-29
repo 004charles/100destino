@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title> Pagamento</title>
+    <!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'assets2/images/logo/favicon.png' %}">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="{% static 'assets2/css/bootstrap.min.css' %}">
+<!-- Fontawesome -->
+<link rel="stylesheet" href="{% static 'assets2/css/fontawesome-all.min.css' %}">
+<!-- Slick -->
+<link rel="stylesheet" href="{% static 'assets2/css/slick.css' %}">
+<!-- Magnific Popup -->
+<link rel="stylesheet" href="{% static 'assets2/css/magnific-popup.css' %}">
+<!-- Line Awesome -->
+<link rel="stylesheet" href="{% static 'assets2/css/line-awesome.min.css' %}">
+<!-- Main CSS -->
+<link rel="stylesheet" href="{% static 'assets2/css/main.css' %}">
+
+</head>
+<body>
+    
+
+
+
+<!-- ==================== Scroll to Top End Here ==================== -->
+<div class="progress-wrap">
+  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+  </svg>
+</div>
+<!-- ==================== Scroll to Top End Here ==================== -->
+
+<!-- ==================== Mobile Menu Start Here ==================== -->
+
+<!-- ==================== Mobile Menu End Here ==================== -->
+
+<!-- ==================== Header Start Here ==================== -->
+<header class="header">
+    <div class="container container-full">
+        <nav class="header-inner flx-between">
+            
+
+            
+
+
+ <div class="theme-switch-wrapper position-relative">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" class="d-none" id="checkbox">  
+    </label>
+</div>
+    
+   
+</div>
+            <!-- Header Right End  -->
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+<!-- ======================== Breadcrumb Four Section Start ===================== -->
+<section class="breadcrumb breadcrumb-four padding-static-y-60 section-bg position-relative z-index-1 overflow-hidden">
+
+    <img src="{% static 'assets2/images/gradients/breadcrumb-gradient-bg.png' %}" alt="" class="bg--gradient">
+
+    <img src="{% static 'assets2/images/shapes/element-moon3.png' %}" alt="" class="element one">
+    <img src="{% static 'assets2/images/shapes/element-moon1.png' %}" alt="" class="element three">
+    
+    <div class="container container-two">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="breadcrumb-four-content">
+                    
+
+                    <ul class="process-list">
+                        <li class="process-list__item activePage">
+                            <a href="cart-payment.html" class="process-list__link">
+                                <div class="icons">
+                                    <span class="icon white"><img src="{% static 'assets2/images/icons/process-white3.svg' %}" alt=""></span>
+                                    <span class="icon colored"><img src="{% static 'assets2/images/icons/process3.svg' %}" alt=""></span>
+                                </div>
+                                <span class="text">Pagamento</span>
+                            </a>
+                        </li>
+                        <li class="process-list__item">
+                            <a href="cart-thank-you.html" class="process-list__link">
+                                <div class="icons">
+                                    <span class="icon white"><img src="{% static 'assets2/images/icons/process-white4.svg' %}" alt=""></span>
+                                    <span class="icon colored"><img src="{% static 'assets2/images/icons/process4.svg' %}" alt=""></span>
+                                </div>
+                                <span class="text">Visualizar bilhete</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================== Breadcrumb Four Section End ===================== -->
+<!-- ======================= Cart Payment Section Start ========================= -->
+<section class="cart-payment padding-y-120 overflow-hidden">
+    <div class="container container-two">
+
+        <div class="payment-method">
+            <h5 style="text-align: center;" class="payment-method__title mb-4">Metodo de pagamento</h5>
+            <div class="payment-method__slider arrow-sm">
+
+                <div class="payment-method__item">
+                    <input class="form-check-input" type="radio" name="payment" id="payment1" hidden>
+                    <label class="form-check-label" for="payment1">
+                        <img src="{% static 'images/R__1_-removebg-preview.png' %}" alt="">
+                    </label>
+                </div>
+
+                <div class="payment-method__item">
+                    <input class="form-check-input" type="radio" name="payment" id="payment2" hidden>
+                    <label class="form-check-label" for="payment2">
+                        <img src="{% static 'images/R (2).jpeg' %}" alt="">
+                    </label>
+                </div>
+                <div class="payment-method__item">
+                    <input class="form-check-input" type="radio" name="payment" id="payment3" hidden>
+                    <label class="form-check-label" for="payment3">
+                        <img src="{% static 'assets2/images/thumbs/payment-method3.png' %}" alt="">
+                    </label>
+                </div>
+
+                
+                
+                
+
+            </div>
+        </div>
+        
+        <div class="cart-payment__box position-relative z-index-1 overflow-hidden">
+            <img src="{% static 'assets2/images/shapes/pattern-curve-six.png' %}" alt="" class="position-absolute end-0 top-0 z-index--1">
+            <img src="{% static 'assets2/images/shapes/pattern-curve-five.png' %}" alt="" class="position-absolute start-0 top-0 z-index--1">
+            
+            
+          
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-sm-10">
+                    <h5 class="cart-payment__title mb-4">Detalhes do Cartão</h5>
+                    <div class="cart-payment-card">
+                        <form action="#">
+                            <div class="row gy-4">
+                                <div class="col-lg-12">
+                                    <label for="passenger" class="form-label mb-2 font-18 font-heading fw-600">Nome do Passageiro</label>
+                                    <div class="position-relative">
+                                        <input type="text" class="common-input common-input--bg common-input--withIcon" id="passenger" placeholder="John Doe">
+                                        <span class="input-icon"><img src="{% static 'assets/images/icons/check-cirlce.svg' %}" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="passenger-quantity" class="form-label mb-2 font-18 font-heading fw-600">Quantidade de Passageiros</label>
+                                    <div class="position-relative">
+                                        <select class="common-input common-input--bg common-input--withIcon" id="passenger-quantity">
+                                            <option value="1">1 Passageiro</option>
+                                            <option value="2">2 Passageiros</option>
+                                            <option value="3">3 Passageiros</option>
+                                            <option value="4">4 Passageiros</option>
+                                            <option value="5">5 Passageiros</option>
+                                        </select>
+                                        <span class="input-icon"><img src="{% static 'assets/images/icons/check-cirlce.svg' %}" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="departure" class="form-label mb-2 font-18 font-heading fw-600">Data de Partida</label>
+                                    <div class="position-relative">
+                                        <input type="date" class="common-input common-input--bg common-input--withIcon" id="departure">
+                                        <span class="input-icon"><img src="{% static 'assets/images/icons/check-cirlce.svg' %}" alt=""></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label for="arrival" class="form-label mb-2 font-18 font-heading fw-600">Comprovante Bancário</label>
+                                    <div class="position-relative">
+                                        <input type="file" class="common-input common-input--bg common-input--withIcon form-control" id="arrival" accept=".pdf,.jpg,.jpeg,.png">
+                                        <span class="input-group-text"><img src="{% static 'assets/images/icons/check-cirlce.svg' %}" alt=""></span>
+                                    </div>
+                                </div>
+                        
+                                <!-- Novo campo para seleção de províncias -->
+                                <div class="col-lg-12">
+                                    <label for="province" class="form-label mb-2 font-18 font-heading fw-600">Província de destino</label>
+                                    <div class="position-relative">
+                                        <h1 style="font-size: 20px;" >Huambo</h1>
+                                        <span class="input-icon"><img src="{% static 'assets/images/icons/check-cirlce.svg' %}" alt=""></span>
+                                    </div>
+                                </div>
+                        
+                                <div class="col-lg-12">
+                                    <div class="total-bill flx-between">
+                                        <span class="text text-heading font-20 fw-500 font-heading">Total</span>
+                                        <span class="amount text-heading font-20 fw-500 font-heading">Kz 274.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a href="cart-thank-you.html" class="btn btn-main btn-lg w-100 pill"> Confirmar pagamento</a>
+                                </div>
+                                
+                                <!-- Restante do formulário continua igual -->
+                            </div>
+                        </form>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+        
+    </div>
+</section>
+<!-- ======================= Cart Payment Section End ========================= -->
+
+<!-- ======================== Brand Section Start ========================= -->
+
+
+
+
+<!-- Jquery js -->
+<script src="{% static 'assets2/js/jquery-3.7.1.min.js' %}"></script>
+<script src="{% static 'assets2/js/boostrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets2/js/countdown.js' %}"></script>
+<script src="{% static 'assets2/js/counterup.min.js' %}"></script>
+<script src="{% static 'assets2/js/slick.min.js' %}"></script>
+<script src="{% static 'assets2/js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'assets2/js/apexchart.js' %}"></script>
+<script src="{% static 'assets2/js/marquee.min.js' %}"></script>
+
+<script src="{% static 'assets2/js/main.js' %}"></script>
+
+
+    </body>
+</html>

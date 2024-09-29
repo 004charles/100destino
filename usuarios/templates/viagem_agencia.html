@@ -1,0 +1,453 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'assets1/images/logo/favicon.png' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'assets1/css/bootstrap.min.css' %}">
+    <!-- File Upload -->
+    <link rel="stylesheet" href="{% static 'assets1/css/file-upload.css' %}">
+    <!-- Plyr -->
+    <link rel="stylesheet" href="{% static 'assets1/css/plyr.css' %}">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+    <!-- Full Calendar -->
+    <link rel="stylesheet" href="{% static 'assets1/css/full-calendar.css' %}">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="{% static 'assets1/css/jquery-ui.css' %}">
+    <!-- Editor Quill UI -->
+    <link rel="stylesheet" href="{% static 'assets1/css/editor-quill.css' %}">
+    <!-- Apex Charts CSS -->
+    <link rel="stylesheet" href="{% static 'assets1/css/apexcharts.css' %}">
+    <!-- Calendar CSS -->
+    <link rel="stylesheet" href="{% static 'assets1/css/calendar.css' %}">
+    <!-- jVector Map CSS -->
+    <link rel="stylesheet" href="{% static 'assets1/css/jquery-jvectormap-2.0.5.css' %}">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'assets1/css/main.css' %}">
+</head> 
+<body>
+    
+<!--==================== Preloader Start ====================-->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+<!--==================== Preloader End ====================-->
+
+<!--==================== Sidebar Overlay End ====================-->
+<div class="side-overlay"></div>
+<!--==================== Sidebar Overlay End ====================-->
+
+    <!-- ============================ Sidebar Start ============================ -->
+
+    <aside class="sidebar">
+        <!-- botão de fechar a barra lateral -->
+        <button type="button" class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute">
+            <i class="ph ph-x"></i>
+        </button>
+        <!-- botão de fechar a barra lateral -->
+        
+        <a href="{% url 'index' %}" class="sidebar__logo text-center p-20 position-sticky inset-block-start-0 bg-white w-100 z-1 pb-10">
+            <h1>100Destino</h1>
+        </a>
+    
+        <div class="sidebar-menu-wrapper overflow-y-auto scroll-sm">
+            <div class="p-20 pt-10">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu__item has-dropdown">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-squares-four"></i></span>
+                            <span class="text">Painel de Controle</span>
+                            <span class="link-badge">3</span>
+                        </a>
+                        
+                    </li>
+                    <li class="sidebar-menu__item has-dropdown">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-graduation-cap"></i></span>
+                            <span class="text">Pacotes de Viagem</span>
+                        </a>
+                        <!-- Submenu start -->
+                        <ul class="sidebar-submenu">
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link"> Pacotes para Estudantes </a>
+                            </li>
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link"> Pacotes para Mentores </a>
+                            </li>
+                            <li class="sidebar-submenu__item">
+                                <a href="#" class="sidebar-submenu__link"> Criar Pacote </a>
+                            </li>
+                        </ul>
+                        <!-- Submenu End -->
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-users-three"></i></span>
+                            <span class="text">Viagens</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-clipboard-text"></i></span>
+                            <span class="text">Reservas</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-users"></i></span>
+                            <span class="text">Guias de Viagem</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-bookmarks"></i></span>
+                            <span class="text">Recursos</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-chats-teardrop"></i></span>
+                            <span class="text">Mensagens</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sidebar-menu__item">
+                        <span class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Configurações</span>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="#" class="sidebar-menu__link">
+                            <span class="icon"><i class="ph ph-gear"></i></span>
+                            <span class="text">Configurações da Conta</span>
+                        </a>
+                    </li>
+    
+                    
+                    
+                </ul>
+            </div>
+            
+        </div>
+    
+    </aside>  
+<!-- ============================ Sidebar End  ============================ -->
+
+    <div class="dashboard-main-wrapper">
+        <div class="top-navbar flex-between gap-16">
+
+    <div class="flex-align gap-16">
+        <!-- Toggle Button Start -->
+         <button type="button" class="toggle-btn d-xl-none d-flex text-26 text-gray-500"><i class="ph ph-list"></i></button>
+        <!-- Toggle Button End -->
+        
+        <form action="#" class="w-350 d-sm-block d-none">
+            <div class="position-relative">
+                <button type="submit" class="input-icon text-xl d-flex text-gray-100 pointer-event-none"><i class="ph ph-magnifying-glass"></i></button> 
+                <input type="text" class="form-control ps-40 h-40 border-transparent focus-border-main-600 bg-main-50 rounded-pill placeholder-15" placeholder="Search...">
+            </div>
+        </form>
+    </div>
+
+</div>
+
+        
+        <div class="dashboard-body">
+            <!-- Breadcrumb Start -->
+<div class="breadcrumb mb-24">
+    <ul class="flex-align gap-4">
+        <li><a href="#" class="text-gray-200 fw-normal text-15 hover-text-main-600">Home</a></li>
+        <li> <span class="text-gray-500 fw-normal d-flex"><i class="ph ph-caret-right"></i></span> </li>
+        <li><span class="text-main-600 fw-normal text-15">Viagens</span></li>
+    </ul>
+</div>
+<!-- Breadcrumb End -->
+
+            
+
+            <!-- Recommended Start -->
+            <div class="card mt-24">
+                <div class="card-body">
+
+                    
+                    
+                    <div class="row g-20">
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-6">
+                            <div class="card border border-gray-100">
+                                <div class="card-body p-8">
+                                    <a href="course-details.html" class="bg-main-100 rounded-16 overflow-hidden text-center mb-8 h-164 flex-center">
+                                        <img src="{% static 'images/Huambo.jpeg' %}" alt="Course Image" class="cover-img">
+                                    </a>
+                                    <div class="p-8">
+                                        <span class="text-13 py-2 px-10 rounded-pill bg-success-50 text-success-600 mb-16">macon</span>
+                                        <h5 class="mb-8"><a href="course-details.html" class="hover-text-main-600">Luanda. Malange</a></h5>
+
+                                        <div class="flex-align gap-8">
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-clock"></i></span>
+                                                <span class="text-13 text-gray-600">9:30</span>
+                                            </div>
+                                            <div class="flex-align gap-4">
+                                                <span class="text-sm text-main-600 d-flex"><i class="ph ph-chats-circle"></i></span>
+                                                <span class="text-13 text-gray-600">8.000</span>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                </div>
+            </div>
+            <!-- Recommended End -->
+        </div>
+       
+    
+                  <!-- Jquery js -->
+    <!-- jQuery -->
+<script src="{% static 'assets1/js/jquery-3.7.1.min.js' %}"></script>
+<!-- Bootstrap Bundle JS -->
+<script src="{% static 'assets1/js/bootstrap.bundle.min.js' %}"></script>
+<!-- Phosphor JS -->
+<script src="{% static 'assets1/js/phosphor-icon.js' %}"></script>
+<!-- File Upload -->
+<script src="{% static 'assets1/js/file-upload.js' %}"></script>
+<!-- Plyr -->
+<script src="{% static 'assets1/js/plyr.js' %}"></script>
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+<!-- Full Calendar -->
+<script src="{% static 'assets1/js/full-calendar.js' %}"></script>
+<!-- jQuery UI -->
+<script src="{% static 'assets1/js/jquery-ui.js' %}"></script>
+<!-- Editor Quill -->
+<script src="{% static 'assets1/js/editor-quill.js' %}"></script>
+<!-- Apex Charts -->
+<script src="{% static 'assets1/js/apexcharts.min.js' %}"></script>
+<!-- jVector Map -->
+<script src="{% static 'assets1/js/jquery-jvectormap-2.0.5.min.js' %}"></script>
+<!-- jVector Map World -->
+<script src="{% static 'assets1/js/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets1/js/main.js' %}"></script>
+
+
+
+    <script>    
+    // ========================== Range Slider Js Start =====================
+    $(function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 480,
+            values: [ 0, 240 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+    // ========================== Range Slider Js End =====================
+    </script>
+    </body>
+</html>
