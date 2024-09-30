@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector5</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet">
+    
+    <!-- Next.js CSS -->
+    <link rel="preload" href="{% static '_next/static/css/3fd761cdeab601b7.css' %}" as="style">
+    <link rel="stylesheet" href="{% static '_next/static/css/3fd761cdeab601b7.css' %}">
+    
+    <noscript data-n-css=""></noscript>
+</head>
+
+<body>
+    <div id="__next" data-reactroot="">
+        
+        <!-- Topbar -->
+        <div class="topbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'usuarios:index' %}">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'usuarios:login_admin' %}">Login Admin</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'usuarios:login_transporte' %}">Login Agencia</a></li>
+                          
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- Main Content -->
+        <main class="main-container">
+            <div class="image-slider-container">
+                <div class="slide active" style="background-image:url(https://picsum.photos/seed/slide1/1920/1080)"></div>
+                <div class="slide" style="background-image:url(https://picsum.photos/seed/slide2/1920/1080)"></div>
+                <div class="slide" style="background-image:url(https://picsum.photos/seed/slide3/1920/1080)"></div>
+                <div class="white-overlay"></div>
+            </div>
+            
+            <div class="content-container">
+                <img src="{% static 'images/logobranco.png' %}" alt="Logo" class="logo" style="margin-bottom: 20px;">
+            
+                <!-- Formulário de Viagem -->
+                <form class="bg-light p-4 rounded shadow-sm" style="max-width: 600px; margin: 0 auto;">
+                    <h2 class="text-center mb-4">Planeje sua Viagem</h2>
+            
+                    <!-- Campo Origem -->
+                    <div class="mb-3">
+                        <label for="origem" class="form-label">Origem</label>
+                        <input type="text" class="form-control" id="origem" placeholder="Digite sua cidade de origem" required>
+                    </div>
+            
+                    <!-- Campo Destino -->
+                    <div class="mb-3">
+                        <label for="destino" class="form-label">Destino</label>
+                        <input type="text" class="form-control" id="destino" placeholder="Digite seu destino" required>
+                    </div>
+            
+                    <!-- Datas -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="data-ida" class="form-label">Data de Ida</label>
+                            <input type="date" class="form-control" id="data-ida" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="data-volta" class="form-label">Data de Volta</label>
+                            <input type="date" class="form-control" id="data-volta">
+                        </div>
+                    </div>
+            
+                    <!-- Número de Passageiros -->
+                    <div class="mb-3">
+                        <label for="passageiros" class="form-label">Número de Passageiros</label>
+                        <input type="number" class="form-control" id="passageiros" min="1" placeholder="Digite o número de passageiros" required>
+                    </div>
+            
+                    <!-- Botões -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="submit" class="btn btn-dark px-4">Buscar Viagem</button>
+                        <button class="btn btn-outline-dark" type="button" id="button-addon1">
+                            <i class="bi bi-camera"></i> Pesquisar por Foto
+                        </button>
+                        <a class="btn btn-outline-dark" href="praca.html">
+                            <i class="bi bi-cart" style="font-size:24px"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            
+        </main>
+        
+        <!-- Footer -->
+        <footer style="display:flex;justify-content:space-between;align-items:center;position:fixed;bottom:0;width:100%;height:40px;background-color:transparent;padding:0 20px;font-size:0.9rem;color:white">
+            <div>
+                <span>© 2024 Vetor5</span>
+            </div>
+            <div style="display:flex;align-items:center">
+                <a href="https://vector5.vercel.app/termos" style="color:white;text-decoration:none;margin-right:15px">Termos e Políticas</a>
+                <a href="https://vector5.vercel.app/ajuda" style="color:white;text-decoration:none">Ajuda</a>
+            </div>
+        </footer>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script defer="" nomodule="" src="{% static '100/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js' %}"></script>
+    <script defer="" src="{% static '100/_next/static/chunks/webpack-43c8fef724562119.js' %}"></script>
+    <script defer="" src="{% static '100/_next/static/chunks/framework-5f4595e5518b5600.js' %}"></script>
+    <script defer="" src="{% static '100/_next/static/chunks/main-486ee6a92efe3798.js' %}"></script>
+    <script defer="" src="{% static '_next/static/chunks/pages/_app-d93a0db95cec99a7.js' %}"></script>
+    <script defer="" src="{% static '_next/static/chunks/664-7fefc775187e4541.js' %}"></script>
+    <script defer="" src="{% static '_next/static/chunks/pages/index-1d77a54f005125fa.js' %}"></script>
+    <script defer="" src="{% static '_next/static/flVX76L4HyGOvYsU7iJSP/_buildManifest.js' %}"></script>
+    <script defer="" src="{% static '_next/static/flVX76L4HyGOvYsU7iJSP/_ssgManifest.js' %}"></script>
+    
+    <!-- NEXT.js Data -->
+    <script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{}},"page":"/","query":{},"buildId":"flVX76L4HyGOvYsU7iJSP","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script>
+</body>
+</html>

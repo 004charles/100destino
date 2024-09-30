@@ -1,442 +1,129 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="">
-        <meta name="author" content="Tooplate">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index - Append Bootstrap Template</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-        <title>100 Destinos</title>
+  <!-- Favicons -->
+  <link href="assets7/img/favicon.png" rel="icon">
+  <link href="assets7/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        <!-- CSS FILES -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets7/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets7/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets7/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets7/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets7/vendor/swiper/swiper-bundle.min.css'  %}" rel="stylesheet">
 
-        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="{% static 'assets7/css/main.css' %}" rel="stylesheet">
 
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
-
-        <link href="{% static 'css/tooplate-moso-interior.css' %}" rel="stylesheet">
-        
-
-        <style>
-            .shop-image {
-    width: 100%; /* Faz com que a imagem ocupe toda a largura da coluna */
-    height: 200px; /* Define uma altura fixa para todas as imagens */
-    object-fit: cover; /* Faz com que a imagem preencha o espaço, cortando se necessário */
+<style>
+    .navmenu i {
+    font-size: 1.2rem; /* Aumenta o tamanho dos ícones */
+    color: #ffffff; /* Cor branca para os ícones */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
 
-.navbar {
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease-in-out;
-}
+</style>
+</head>
 
-.navbar .nav-link {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-}
+<body class="index-page">
 
-.navbar-brand {
-    font-size: 1.2rem;
-}
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-.navbar-toggler {
-    padding: 0.25rem 0.5rem;
-}
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets7/img/logo.png" alt=""> -->
+        <h1 class="sitename">100Destino</h1><span>.</span>
+      </a>
 
-.navbar-toggler-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-}
+      <!-- Biblioteca Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-.navbar .fa {
-    font-size: 1rem; /* Tamanho dos ícones */
-    color: #0056b3; /* Cor dos ícones */
-}
+<nav id="navmenu" class="navmenu">
+    <ul>
+        <li><a href="index.html#hero" class="active"><i class="bi bi-house-door"></i> Home</a></li>
+        <li><a href="transporte.html"><i class="bi bi-person-circle"></i> Admin</a></li>
+        <li><a href="preco.html"><i class="bi bi-building"></i> Agencias</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
 
-        </style>
-   
-   
+    </div>
+  </header>
 
-    </head>
+  <main class="main">
+
+    <section id="hero" class="hero section dark-background">
+        <img src="{% static 'assets7/img/woman-looking-out-window.jpg' %}" alt="" data-aos="fade-in">
     
-    <body>
-
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" style="padding: 0.5rem 1rem;">
-            <div class="container">
-                <!-- Logotipo -->
-                <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.2rem;">
-                    100 <span class="text-danger">Desti</span><span class="text-success">nos</span>
-                </a>
-        
-                <!-- Botão para dispositivos móveis -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-        
-                <!-- Itens da barra de navegação -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Login Agência -->
-                        <li class="nav-item">
-                            <a class="nav-link fw-medium" href="{% url 'usuarios:login_transporte' %}" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
-                                <i class="fas fa-sign-in-alt me-2"></i> Login Agência
-                            </a>
-                        </li>
-        
-                        <!-- Login Admin -->
-                        <li class="nav-item">
-                            <a class="nav-link fw-medium" href="{% url 'usuarios:login_admin' %}" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
-                                <i class="fas fa-user-shield me-2"></i> Login Admin
-                            </a>
-                        </li>
-        
-                        <!-- Contactar -->
-                        <li class="nav-item">
-                            <a class="nav-link fw-medium" href="#section_2" style="color: #333; font-size: 0.9rem; padding: 0.5rem 0.75rem;">
-                                <i class="fas fa-phone-alt me-2"></i> Contactar
-                            </a>
-                        </li>
-                    </ul>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 style="font-size: 27px;" data-aos="fade-up" data-aos-delay="100">Compre bilhete sem enfretar fila</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">Bem vindo ao 100Destinos</p>
                 </div>
-            </div>
-        </nav>
-        
-        
-        
-        
-        
-
-        <main  >
-            <section   class="hero-section hero-slide d-flex justify-content-center align-items-center" id="section_1"> 
-            <div  class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-12 text-center mx-auto">
-                        <div class="hero-section-text">
-
-                            <div class="d-flex justify-content-center align-items-center">
-                                <form class="custom-form hero-form" action="#" method="get" role="form">
-                                    <div class="row">
-                                        <div class="col-lg-5 col-md-6 col-12">
-                                            <div class="input-group align-items-center">
-                                                <label for="product-name">Onde voce vai?</label>
-                                                <input type="text" name="product-name" id="product-name" class="form-control" placeholder="Luanda, Benguela,Huambo" required>
-                                            </div>
-                                        </div>
-
-
-                                        
-                                        
-                                        <div class="col-lg-5 col-md-6 col-12">
-                                            <div class="input-group align-items-center">
-                                                <label for="product-name">Data</label>
-                                                <input type="datetime-local" name="product-name" id="product-name" class="form-control" placeholder="Luanda, Benguela,Huambo" required>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-lg-2 col-md-6 col-12">
-                                            <button type="submit" class="form-control">Buscar</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                
-                                
-                            </div>
-                            
-                            <!-- Texto abaixo do formulário -->
-                            <small class="section-small-title mt-4"> <i class="hero-icon bi-bus"></i></small>
-                            <h1 class="hero-title text-white mt-2 mb-4">Viaje com conforto para o seu destino</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        
-
-        <section class="shop-section section-padding" id="section_3">
-            <div class="container">
-                <div class="row">
-        
-                    <div class="col-lg-12 col-12 text-center">
-                        <small class="section-small-title"></small>
-                        <h2 class="mt-2 mb-4 fs-3 fs-md-2 fs-lg-1">
-                            <span class="tooplate-red">Transportadoras</span> 100 Destinos
-                        </h2>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 col-6">
-                        <div class="shop-thumb">
-                            <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:transportadoras' %}">
-                                    <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                </a>
-                                <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                </div>
-                            </div>
-                            <div class="shop-body">
-                                <h4 style="font-size: 16px;" >macon</h4>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 col-6">
-                        <div class="shop-thumb">
-                            <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:ango' %}">
-                                    <img src="{% static 'images/R.jpeg' %}" class="shop-image img-fluid" alt="">
-                                </a>
-                                <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:ango' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                </div>
-                            </div>
-                            <div class="shop-body">
-                                <h4 style="font-size: 16px;" >Angoreal</h4>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 col-6">
-                        <div class="shop-thumb">
-                            <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:huambo' %}">
-                                    <img src="{% static 'images/IMG-20231018-WA0000.jpg' %}" class="shop-image img-fluid" alt="">
-                                </a>
-                                <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:huambo' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                </div>
-                            </div>
-                            <div class="shop-body">
-                                <h4 style="font-size: 16px;" >HuamboExpress</h4>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 col-6">
-                        <div class="shop-thumb">
-                            <div class="shop-image-wrap">
-                                <a href="{% url 'usuarios:transportadoras' %}">
-                                    <img src="{% static 'images/OIP.jpeg' %}" class="shop-image img-fluid" alt="">
-                                </a>
-                                <div class="shop-btn-wrap">
-                                    <a href="{% url 'usuarios:transportadoras' %}" class="shop-btn custom-btn btn d-flex align-items-center">Saiba mais</a>
-                                </div>
-                            </div>
-                            <div class="shop-body">
-                                <h4 style="font-size: 16px;" >macon</h4>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-        
-            
-
-
-            
-            <section style="margin-top: -10%;"  class="shop-section section-padding" id="section_3">
-                <div class="container">
-                    <div class="row">
-            
-                        <div class="col-lg-12 col-12 text-center">
-                            <small class="section-small-title" style="font-style: italic; color: #6c757d;">Descubra</small>
-                            <h2 class="mt-2 mb-4" style="font-size: 2.5rem; font-weight: bold; letter-spacing: 2px; color: #0056b3; text-transform: uppercase;">
-                                <span class="tooplate" style="color:#0056b3;">Nossos</span> Destinos
-                            </h2>
-                        </div>
+    
+                <!-- Barra de Pesquisa e Formulário Centralizado -->
+                <div class="col-lg-8 col-md-10 col-sm-12" data-aos="fade-up" data-aos-delay="300">
+                    <form action="forms/newsletter.php" method="post" class="php-email-form d-flex justify-content-center align-items-center">
                         
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/Huambo.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Huambo, Huila</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
+                        <!-- Barra de Pesquisa à Esquerda -->
+                        <div class="input-group me-3" style="width: 350px;">
+                            <input type="text" class="form-control" placeholder="Pesquise seu destino" aria-label="Search">
+                            <button class="btn btn-outline-secondary" type="submit">
+                                <i class="bi bi-search"></i> <!-- Ícone de Pesquisa -->
+                            </button>
                         </div>
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/lubango.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Lubango, Cabinda</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/Benguela.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Benguela, Huambo</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/Namibe.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Namibe, Cunene</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/Nalange.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="#" class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Malange, Menongue</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
-                        </div>
-            
-                        <div class="col-lg-4 col-md-6 col-6">
-                            <div class="shop-thumb">
-                                <div class="shop-image-wra">
-                                    <a href="#">
-                                        <img src="{% static 'images/Cabinda.jpeg' %}" class="shop-image img-fluid" alt="">
-                                    </a>
-                                    <div class="shop-btn-wrap">
-                                        <a href="# class="shop-btn custom-btn btn d-flex align-items-center"></a>
-                                    </div>
-                                </div>
-                                <div class="shop-body">
-                                    <h4 style="font-size: 19px;" >Cabinda, Moxico</h4>
-                                </div>
-                                <p class="shop-pricing mb-0 mt-3">
-                                    <p class="shop-pricing mb-0 mt-3">
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                        <span class="badge custom-badge">9:30</span>
-                                    </p>
-                                    <span style="color: brown;" class="badge custom-badge">kz 6,500</span>
-                                </p>
-                            </div>
-                        </div>
-            
-                    </div>
+    
+                       
+    
+                    </form>
                 </div>
-            </section>
-            
-            <style>
-                .shop-thumb {
-                    transition: all 0.3s ease; /* Transição suave para o efeito */
-                }
-            
-                .shop-thumb:hover {
-                    padding: 10px; /* Aumenta o padding quando o mouse passa */
-                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
-                    border-radius: 5px; /* Opcional: adiciona cantos arredondados */
-                }
-            </style>
-            
-            
-            
-            
-        </main>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+      
+  
 
-        <footer class="text-center py-3">
-            <p>&copy; 2024 100 destinos. Todos os direitos reservados.</p>
-        </footer>
-        
+  </main>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="% static 'js/click-scroll.js' %"></script>
-        <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
-        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'js/custom.js' %}"></script>
-    </body>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets7/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets7/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets7/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets7/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets7/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets7/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets7/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets7/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets7/js/main.js' %}"></script>
+
+</body>
+
 </html>
